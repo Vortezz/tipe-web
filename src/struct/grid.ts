@@ -2,10 +2,10 @@ export default class Grid {
 
 	private _width: number = 512;
 	private _height: number = 512;
-	private _squareSize: number = 8;
+	private _squareSize: number = 2;
 	private _grid: number[][] = [];
 	private _isDrawing: boolean = false;
-	private _drawingType: number = 1;
+	private _drawingType: number = 0;
 	private _drawingRadius: number = 1;
 
 	public initialize(): void {
@@ -16,8 +16,6 @@ export default class Grid {
 				this._grid[i][j] = 0;
 			}
 		}
-
-		console.log(this._grid);
 	}
 
 	public loadGrid(content: string): void {
